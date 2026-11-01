@@ -1,0 +1,20 @@
+# Build output
+doom/build/
+doom/doomgeneric
+doom/doomgeneric.map
+*.o
+
+# Game data (downloaded by get_freedoom.sh)
+*.wad
+freedoom*.zip
+
+# Run output
+results/
+.default.cfg
+.savegame/
+frames/
+
+# Profiler output
+gmon.out
+callgrind.out.*
+perf.data*
