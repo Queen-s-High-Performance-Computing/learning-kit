@@ -2,13 +2,14 @@
 
 ## Score
 
-Your score is the **largest number of copies** for which `scripts/score.sh <copies>` passes on one whole Frontenac CPU node. A run passes when **every** copy:
+Your score is the **largest number of copies** for which `scripts/score.sh <copies>` passes on the whole of `frnt201`. A run passes when **every** copy:
 
 1. finishes the demo,
 2. passes validation (see below), and
 3. runs at **35 fps or more** on average, the real speed of the original game.
 
-- **Hardware:** one exclusive node of type **[NODE TYPE]** with **[N] cores**. CPU only; no GPUs.
+- **Hardware:** the whole of `frnt201` (the club's node): 2 × Intel Xeon Gold 6430, 64 cores / 128 hardware
+     threads (2 per core), 250 GB memory. Use the CPUs only, not the node's GPUs. CPU only; no GPUs.
 - **Demo:** `demo1`.
 
 Write your claimed number in your README. Organizers run the scorer at that number; if it fails, they retry at 90% of it, then 80%, and so on.
