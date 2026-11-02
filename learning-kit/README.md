@@ -1,6 +1,6 @@
 # DOOMATHON: Learning track starter kit
 
-**Goal:** run as many copies of Doom **at the same time** as you can on one Frontenac CPU node, with **every copy keeping up at 35 fps or more**, the speed the original game runs at.
+**Goal:** run as many copies of Doom **at the same time** as you can on `frnt201`, the club's node on frontenac with **every copy keeping up at 35 fps or more**, the speed the original game runs at.
 
 Each copy plays a *demo*, a recorded game that Doom plays back by itself. Read [RULES.md](RULES.md) before you start, and [RESOURCES.md](RESOURCES.md) for Slurm help and ideas.
 
@@ -41,9 +41,10 @@ You'll see compiler warnings. That's normal for 1990s code. The build worked if 
 
 **4. Start a job.** Never run Doom on the login node.
 ```
-salloc --time=00:30:00 --cpus-per-task=4 --mem-per-cpu=1G
+salloc --time=00:30:00 --cpus-per-task=16 --mem-per-cpu=1G
 cd ~/<your-team-repo>
 ```
+All teams share `frnt201`, so use at most 16 CPUs per job. Your practice numbers will vary while other teams are running.
 
 **5. Score yourself.** Try 4 copies at once:
 ```
@@ -51,7 +52,7 @@ scripts/score.sh 4
 ```
 You should see something like:
 ```
-Running 4 copies of demo1 at once on frnt201, 4 CPUs...
+Running 4 copies of demo1 at once on frnt201, 16 CPUs...
 All copies finished in 5s
   valid copies: 4 of 4
   slowest copy: 1070.2 fps (needs 35)
