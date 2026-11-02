@@ -13,6 +13,7 @@ Frontenac is shared by hundreds of researchers. **Slurm** is the scheduler: you 
 | `sinfo` | See the cluster's nodes and partitions |
 
 Tips:
+- **Use at most 16 CPUs per job.** All teams share `frnt201`.
 - **Ask for what you need.** Bigger and longer requests wait longer in the queue.
 - **Use `--mem-per-cpu`, not `--mem`.** Frontenac rejects `--mem` for multi-CPU jobs.
 - **When the time runs out, the job ends, but your files stay.**
